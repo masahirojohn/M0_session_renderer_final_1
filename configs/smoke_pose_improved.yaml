@@ -1,6 +1,6 @@
 # configs/smoke_pose_improved.yaml
 io:
-  assets_dir: "tests/assets_min"
+  assets_dir: "assets/assets_min"
   out_dir: "tests/out"
   exp_name: "smoke_pose_improved"
 
@@ -14,13 +14,13 @@ render:
   crossfade_frames: 4
   affine_points_yaml_rel: "configs/affine_points.yaml"
   dump_fg_png: true
-  fg_png_dir: "out/fg_for_m35/in/fg"
+  fg_png_dir: "fg/in/fg"
 
 inputs:
   # ★ assets_dir(=tests/assets_min) からの相対にする（m0_runner仕様）
   mouth_timeline: "../timelines/mouth_timeline_test1.json"
-  pose_timeline:  "../timelines/pose_timeline_m0_scroll_rivision2.json"
-  #expression_timeline: "../timelines/sess_real_01.expression_timeline.json"  # 任意
+  pose_timeline:  "../pose_timeline_m0_wrapper_leaning3.json"
+  expression_timeline: "../timelines/sess_real_01.expression_timeline.json"  # 任意
 
 atlas:
   # ★ assets_dir からの相対（m0_runner仕様）
