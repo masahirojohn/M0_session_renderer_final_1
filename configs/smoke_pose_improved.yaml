@@ -1,1 +1,41 @@
+# configs/smoke_pose_improved.yaml
+io:
+  assets_dir: "tests/assets_min"
+  out_dir: "tests/out"
+  exp_name: "smoke_pose_improved"
 
+video:
+  width: 720
+  height: 720
+  fps: 25
+  duration_s: 38.0
+
+render:
+  crossfade_frames: 4
+  affine_points_yaml_rel: "configs/affine_points.yaml"
+  dump_fg_png: true
+  fg_png_dir: "out/fg_for_m35/in/fg"
+
+inputs:
+  # ★ assets_dir(=tests/assets_min) からの相対にする（m0_runner仕様）
+  mouth_timeline: "../timelines/mouth_timeline_test1.json"
+  pose_timeline:  "../timelines/pose_timeline_m0_scroll_rivision2.json"
+  #expression_timeline: "../timelines/sess_real_01.expression_timeline.json"  # 任意
+
+atlas:
+  # ★ assets_dir からの相対（m0_runner仕様）
+  atlas_json: "atlas.min.json"
+
+  # ★ [ADD] 3点アフィン用：スプライト内の基準点定義
+  affine_points_yaml: "configs/affine_points.yaml"
+
+transform:
+  enabled: true
+  roll_coef: 0.8
+  yaw_coef: 0.15
+  pitch_coef: 0.1
+  target_h_ratio: 1.0
+
+benchmark:
+  label: "smoke_pose_improved"
+  record_frame_level: false
