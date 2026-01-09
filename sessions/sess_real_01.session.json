@@ -3,9 +3,9 @@
   "session_id": "sess_real_01",
   "session_audio_ms": 36040,
 
-  "pose_timeline": "tests/timelines/pose_timeline_m0_yaw30_3.json",
-  "mouth_timeline": "tests/timelines/mouth_timeline_test1.json",
-  "expression_timeline": "tests/timelines/sess_real_01.expression_timeline.json",
+  "pose_timeline": "timelines/pose_timeline_m0_wrapper_leaning3.json",
+  "mouth_timeline": "timelines/mouth_timeline_test1.json",
+  "expression_timeline": "timelines/sess_real_01.expression_timeline.json",
 
-  "audio": "tests/audio/1_0_72.wav"
+  "audio": "audio/1_0_72.wav"
 }
